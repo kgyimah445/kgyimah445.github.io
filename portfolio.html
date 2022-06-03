@@ -4,7 +4,7 @@
 <head>
     <title>Kobby's Website</title>
     <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/106687849?v=4">
-    <style>
+    <style type="text/css">
         body {
             background: rgb(29, 31, 31);
             color: rgb(45, 45, 45);
@@ -69,6 +69,31 @@
             flex: 1;
             padding: 15px;
         }
+         /* portfolio styles */
+         .content h1 {
+             color: black;
+         }
+         
+         #portfolio {
+             list-style-type: none;
+             padding-left: 0;
+         }
+         
+         #portfolio li {
+             background: #fff;
+             padding: 10px;
+             border-radius: 10px;
+             margin-bottom: 10px;
+         }
+         
+         #portfolio li:hover {
+             background: #eee;
+         } 
+         
+         #portfolio a {
+             text-decoration: none;
+             color: #454545;
+         }
 
         #interests {
             border: 4px silver ridge;
@@ -83,42 +108,36 @@
 </head>
 
 <body>
-    <!-- All content goes here -->
     <div id="all-contents">
         <nav>
             <h1>Kobby's Website</h1>
-                <ul id="nav-ul">
-                    <li class="nav-li">
-                        <a href="index.html"> Home </a>
-                    </li>
-                    <li class="nav-li">
-                        <a href="portfolio.html"> Portfolio </a>
-                    </li>
-                </ul>
+            <ul id="nav-ul">
+                <li class="nav-li">
+                    <a class="nav-a" href="index.html">Home</a>
+                </li>
+                <li class="nav-li">
+                    <a class="nav-a" href="portfolio.html">Portfolio</a>
+                </li>
+            </ul>
         </nav>
         <main>
-            <!-- Sidebar section -->
-            <div class="sidebar">
-                <img class="sidebar-img" src="https://avatars.githubusercontent.com/u/106687849?v=4">
-            </div>
-
-            <!-- Content section -->
             <div class="content">
-                <h2>Kobby Gyimah</h2>
-                <p>Student at Benjamin Franklin High School</p>
-                <!-- Interests section -->
-                <div class="interests">
-                    <h3>Interests</h3>
-                    <ul>
-                        <li>Gaming</li>
-                        <li> Saxiphone </li>
-                        <li>Computers and Coding</li>
-                    </ul>
-                </div>
+                <h1>Portfolio</h1>
+                <ul id="portfolio">
+                    <li><a href="projects/platformer/">Platformer : A cannon - dodging, collectible - grabbing adventure
+                            game for Halleb0t</a></li>
+                    <li><a href="projects/bouncing-box/">Bouncing Box : A project that gives you a taste of game
+                            development on the web </a></li>
+                    <li><a href="projects/circularity/">Circularity : A motion poem using random number generation and
+                            velocity applied to circle shapes...</a></li>
+                    <li><a href="projects/catstagram/">Catsagram: A full-stack of a web-based application, modeled after Instagram but with cats.
+                    </a></li>
+                </ul>
             </div>
         </main>
     </div>
 
+    </div>
 </body>
 
 </html>
