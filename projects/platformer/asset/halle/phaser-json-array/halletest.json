@@ -1,0 +1,98 @@
+{"frames": [
+	{	
+		"filename": "duck-0001.png" 
+			"frame": {"x": 1,"y": 1,"w": 93,"h": 103},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x": 0,"y": 0,"w": 93,"h": 103}
+			"sourceSize": {"w": 93,"h": 103}
+		},
+		{
+
+			"filename": "jump-002" 
+			"frame": {"x": 96,"y": 1,"w": 93,"h": 103},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x": 0,"y": 0,"w": 93,"h": 103},
+			"sourceSize": {
+				"w": 93,
+				"h": 103
+			}
+		},
+		
+		"filename":"front-death-0001" {
+			"frame": {"x": 1,"y": 106,"w": 93,"h": 103},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x": 0,"y": 0,"w": 93,"h": 103},
+			"sourceSize": {
+				"w": 93,
+				"h": 103
+			}
+		},
+		"idle.png": {
+			"frame": {"x": 96,"y": 106,"w": 93,"h": 103},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x": 0,"y": 0,"w": 93,"h": 103},
+			"sourceSize": {
+				"w": 93,
+				"h": 103
+			}
+		},
+		{
+		"filename":"jump-001" 
+			"frame": {"x": 191,"y": 1,"w": 93,"h": 103},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x": 0,"y": 0,"w": 93,"h": 103},
+			"sourceSize": {
+				"w": 93,
+				"h": 103
+			}
+		},
+		{
+		"filename":"run-001" {
+			"frame": {"x": 191,"y": 106,"w": 93,"h": 103},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x": 0,"y": 0,"w": 93,"h": 103},
+			"sourceSize": {
+				"w": 93,
+				"h": 103
+			}
+		},
+		{
+		"filename":"run-002" {
+			"frame": {"x": 1,"y": 211,"w": 93,"h": 103},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x": 0,"y": 0,"w": 93,"h": 103},
+			"sourceSize": {
+				"w": 93,
+				"h": 103
+			}
+		},
+		"filename":"run-003" {
+			"frame": {"x": 96,"y": 211,"w": 93,"h": 103},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x": 0,"y": 0,"w": 93,"h": 103},
+			"sourceSize": {
+				"w": 93,
+				"h": 103
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 285,
+			"h": 315
+		},
+		"scale": "1"
+	}
+}

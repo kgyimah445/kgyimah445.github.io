@@ -216,12 +216,12 @@
             let 
                 flyingJump = animations.flyingJump,
                 // todo : fix magic number using mid, you'll have to find it by getting the length of the range of frames //
-                mid = Math.floor(flyingJump.frameTotal / 2),
+                mid = Math.floor(flyingJump.frameTotal / 3),
                 origYOffset = asset.body.offset.y;
                 console.log(`total frames: ${flyingJump.frameTotal}`);
                 console.log(`origYOffset : ${origYOffset}`);
             
-            asset.body.offset.x += 10 * _direction;
+            asset.body.offset.x += 0 * _direction;
             asset.body.offset.y -= 30;
             asset.body.y -= 22;
             let onUpdate = function (anim, frame) {
@@ -243,7 +243,7 @@
             setState(_flyingJump);
             asset.animations.currentAnim.onComplete.addOnce(function onComplete() { 
                 console.log('jump complete');
-                asset.body.offset.y += 24;
+                asset.body.offset.y += 20;
                 flyingJump.onUpdate.remove(onUpdate, this);
                 stop();
             }, this);
