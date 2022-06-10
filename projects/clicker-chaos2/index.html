@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        #clicker-image {
+            cursor: pointer;
+        }
+    </style>
+
+<body>
+    <h1>RAM Clicker</h1>
+    <!-- <div class="top-box"> -->
+    <div class="main-box">
+        <div class="clicker-box">
+            <img draggable="false" id="clicker-image" src="https://avatars.githubusercontent.com/u/106687849?v=4">
+            <p id="ram-amount">RAM: 0 Bytes</p>
+            <p id="RPS">BPS: 0 BYTES PER SECOND</p>
+        </div>
+        <div class="autoclicker-box">
+            <div class="autoclicker" id="autoclicker1" title="Half a byte of RAM per second">
+                <p>MicroSD Card</p>
+                <p id="microSD-count">Owned: 0</p>
+                <p id="microSD-cost">Cost: 25</p>
+                <button id="purchase-microSD">BUY ONE</button>
+            </div>
+            <div class="autoclicker" id="autoclicker2" title="2 bytes of ram per second">
+                <p>SD Card </p>
+                <p id="sd-count">Owned: 0</p>
+                <p id="sd-cost">Cost: 45</p>
+                <button id="purchase-sd">BUY ONE</button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- <div class="credits">
+            :)
+            </div> -->
+    <!-- </div> -->
+    <script>
+        // Variables
+        // incase ur not me:
+        // c+p = copy paste
+        // pi = passive income
+
+
+
+        //"ram" is just the main var for gaining things
+        // as seen below "ramPerSecond is the main passive income"
+        ram = 0
+        ramPerSecond = 0
+        // This is where all major changes to passive income systems happen, numberOwned stays at 0 though
+        var microSD = {
+            rps: 0.5,
+            numberOwned: 0,
+            basePrice: 25,
+        };
+        var sd = {
+            rps: 2,
+            numberOwned: 0,
+            basePrice: 45,
+        }
+        // Core Functionality
+        // addAutoRam needs to be c+p for any additionally pi machines
+        setInterval(addAutoRAM, 1000);
+        setInterval(addAutosd, 1000)
+        setInterval(doUpdate, 25);
+
+
+        // Event/Click Listeners
+        $("#clicker-image").on("click", downloadRAM);
+        // this needs to be c+p for any+ pi machines
+        $("#purchase-microSD").on('click', purchaseMicroSD);
+        $("#purchase-sd").on('click', purchasesd);
+
+
+        // Functions
+        // this needs to be c+p for any pi machines
+        function downloadRAM() {
+            ram = ram + 1
+            $("#ram-amount").text("RAM: " + ram + " bytes");
+        }
+        function purchaseMicroSD() {
+            // increases cost
+            var cost = Math.ceil(microSD.basePrice * Math.pow(1.25, microSD.numberOwned));
+            if (ram >= cost) {
+                // subtracts money
+                ram = ram - cost
+                // updates RPS
+                ramPerSecond = ramPerSecond + microSD.rps
+                $("#RPS").text("BPS: " + ramPerSecond + "BYTES PER SECOND");
+                // updates PI OWNED
+                microSD.numberOwned = microSD.numberOwned + 1
+                $("#microSD-count").text("Owned: " + microSD.numberOwned); // Update the text based on the updated numberOwned property
+
+                // calculates the new cost 
+                var newPrice = Math.ceil(microSD.basePrice * Math.pow(1.25, microSD.numberOwned));
+                $('#microSD-cost').text("Cost: " + newPrice);
+            }
+        }
+        function purchasesd() {
+            // increases cost
+            var cost = Math.ceil(sd.basePrice * Math.pow(1.25, sd.numberOwned));
+            if (ram >= cost) {
+                // subtracts money
+                ram = ram - cost
+                // updates RPS
+                ramPerSecond = ramPerSecond + sd.rps
+                $("#RPS").text("BPS: " + ramPerSecond + "BYTES PER SECOND");
+                // updates PI OWNED
+                sd.numberOwned = sd.numberOwned + 1
+                $("#sd-count").text("Owned: " + sd.numberOwned); // Update the text based on the updated numberOwned property
+
+                // calculates the new cost 
+                var newPrice = Math.ceil(sd.basePrice * Math.pow(1.25, sd.numberOwned));
+                $('#sd-cost').text("Cost: " + newPrice);
+            }
+        }
+
+        function addAutoRAM() {
+            // actual passive income
+            ram = ram + ramPerSecond
+            // If you chose a number different than 1000 above for your setInterval timer, you'll have to divide the ramPerSecond value before adding it to the ram.
+            // For example, if you chose 250, you'll update the ram variable by adding one fourth of the ramPerSecond value.
+            $("#ram-amount").text("RAM: " + Math.floor(ram) + " bytes");
+        }
+        function addAutosd() {
+            // actual passive income
+            ram = ram + ramPerSecond
+            // If you chose a number different than 1000 above for your setInterval timer, you'll have to divide the ramPerSecond value before adding it to the ram.
+            // For example, if you chose 250, you'll update the ram variable by adding one fourth of the ramPerSecond value.
+            $("#ram-amount").text("RAM: " + Math.floor(ram) + " bytes");
+        }
+
+        function doUpdate() {
+            $("#ram-amount").text("RAM: " + ram + " bytes");
+            $("#ram-amount").text("RAM: " + Math.floor(ram) + " bytes");
+            $('#microSD-cost').text("Cost: " + newPrice);
+            $("#microSD-count").text("Owned: " + microSD.numberOwned);
+            $("#RPS").text("BPS: " + ramPerSecond + "BYTES PER SECOND");
+        }
+
+
+        /* All code above here */
+    </script>
+</body>
+
+<div classs="main-box">
+    <div class="autoclicker" id="autoclicker1" title="Increased click efficiency">
+        <p>Typing</p>
+        <p id="rizz-count">Level: 0</p>
+        <p id="rizz-cost">Cost: 100</p>
+        <button id="purchase-typing">UPGRADE</button>
+        <script>
+            $("#purchase-typing").on('click', purchasetyping);
+            function purchastetyping(); {
+               if (ram>=100) {function downloadRAM() {
+            ram = ram + 2
+            ram = ram - 100
+            $("#ram-amount").text("RAM: " + ram + " bytes");
+        }
+
+
+            }
+        }
+        </script>
+    </div>
+
+</div>
+
+</html>
+
+
+<!-- AHH TESTING LOCATION!! -->
