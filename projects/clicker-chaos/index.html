@@ -53,22 +53,27 @@
         // as seen below "ramPerSecond is the main passive income"
         ram = 0
         ramPerSecond = 0
+        var ce = 0
         // This is where all major changes to passive income systems happen, numberOwned stays at 0 though
         var microSD = {
-            rps: 0.5,
+            rps: 1,
             numberOwned: 0,
             basePrice: 25,
         };
         var sd = {
-            rps: 2,
+            rps: 4,
             numberOwned: 0,
             basePrice: 45,
+        }
+        var typing = {
+            numberOwned: 0,
+            basePrice: 100,
         }
         // Core Functionality
         // addAutoRam needs to be c+p for any additionally pi machines
         setInterval(addAutoRAM, 1000);
         setInterval(addAutosd, 1000)
-        setInterval(doUpdate, 25);
+        setInterval(doUpdate, 25); 
 
 
         // Event/Click Listeners
@@ -81,7 +86,7 @@
         // Functions
         // this needs to be c+p for any pi machines
         function downloadRAM() {
-            ram = ram + 1
+            ram = ram + 1 + ce
             $("#ram-amount").text("RAM: " + ram + " bytes");
         }
         function purchaseMicroSD() {
@@ -152,21 +157,29 @@
 <div classs="main-box">
     <div class="autoclicker" id="autoclicker1" title="Increased click efficiency">
         <p>Typing</p>
-        <p id="rizz-count">Level: 0</p>
-        <p id="rizz-cost">Cost: 100</p>
+        <p id="typing-count">Level: 0</p>
+        <p id="typing-cost">Cost: 100</p>
         <button id="purchase-typing">UPGRADE</button>
         <script>
             $("#purchase-typing").on('click', purchasetyping);
-            function purchastetyping(); {
-               if (ram>=100) {function downloadRAM() {
-            ram = ram + 2
-            ram = ram - 100
-            $("#ram-amount").text("RAM: " + ram + " bytes");
-        }
+            function purchasetyping() {
+                // increases cost
+                var cost = Math.ceil(typing.basePrice * Math.pow(2.25, typing.numberOwned));
+                if (ram >= cost) {
+                    // subtracts money
+                    ram = ram - cost
+                    // updates RPS
+                    ce = ce + 5
+                    // updates PI OWNED
+                    typing.numberOwned = typing.numberOwned + 1
+                    $("#typing-count").text("Owned: " + typing.numberOwned); // Update the text based on the updated numberOwned property
 
-
+                    // calculates the new cost 
+                    var newPrice = Math.ceil(typing.basePrice * Math.pow(2.25, typing.numberOwned));
+                    $('#typing-cost').text("Cost: " + newPrice);
+                }
             }
-        }
+
         </script>
     </div>
 
