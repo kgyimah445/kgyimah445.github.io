@@ -14,7 +14,7 @@ var init = function (window) {
 
         window.opspark.game = {};
         var game = window.opspark.game;
-
+        
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM SETUP ////////////////////////////
         ////////////////////////////////////////////////////////////
@@ -69,7 +69,7 @@ var init = function (window) {
             // TODO 9 : Iterate over the array
             for (var i = 0; i < circles.length; i++) {
                 var eachCircle = circles[i];
-                physikz.updatePosition(eachCircle, canvas, 100, 100)
+                physikz.updatePosition(eachCircle, canvas, 100, 1000)
                 game.checkCirclePosition(eachCircle)
                 // code to repeat using eachValue
              }

@@ -1,69 +1,88 @@
 <!doctype html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
 
-        <title>Operation Spark || Motion Poem</title>
-        <meta name="description" content="Operation Spark Motion Poem">
-        <meta name="author" content="operationspark.org">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="css/style.css" rel="stylesheet">
+<head>
+    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operation Spark || Motion Poem</title>
+    <meta name="description" content="Operation Spark Motion Poem">
+    <meta name="author" content="operationspark.org">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- all core CreateJS and 3rd party libraries are listed here: -->
-        <script src="bower_components/lodash/lodash.min.js"></script>
-        <script src="bower_components/easeljs/lib/easeljs-0.8.2.min.js"></script>
-        <script src="bower_components/opspark-draw/draw.js"></script>
-        <script src="bower_components/racket/racket.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet">
 
-        <!-- our app javascript code -->
-        <script src="js/opspark.js"></script>
-        <script src="js/init.js"></script>
-        
-        <style type="text/css">
-            @keyframes bgcolor {
-    0% {
-        background-color: #45a3e5
-    }
+    <!-- all core CreateJS and 3rd party libraries are listed here: -->
+    <script src="bower_components/lodash/lodash.min.js"></script>
+    <script src="bower_components/easeljs/lib/easeljs-0.8.2.min.js"></script>
+    <script src="bower_components/opspark-draw/draw.js"></script>
+    <script src="bower_components/racket/racket.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+    <!-- our app javascript code -->
+    <script src="js/opspark.js"></script>
+    <script src="js/init.js"></script>
 
-    30% {
-        background-color: #66bf39
-    }
+    <style type="text/css">
+        @keyframes bgcolor {
+            0% {
+                background-color: #45a3e5
+            }
 
-    60% {
-        background-color: #eb670f
-    }
+            30% {
+                background-color: #66bf39
+            }
 
-    90% {
-        background-color: #f35
-    }
+            60% {
+                background-color: #eb670f
+            }
 
-    100% {
-        background-color: #864cbf
-    }
-}
+            90% {
+                background-color: #f35
+            }
 
-body {
-    -webkit-animation: bgcolor 20s infinite;
-    animation: bgcolor 10s infinite;
-    -webkit-animation-direction: alternate;
-    animation-direction: alternate;
-}
-        </style>
-    </head>
-    <body>
-        
-        <div>
-            <canvas id="canvas" width="500" height="500"></canvas>
-        </div>
-        <script id="motion-poem">
-            (function(){
-                init(window);
-                window.opspark.makeGame();
-            })();
-        </script>
-    </body>
+            100% {
+                background-color: #864cbf
+            }
+        }
+
+        body {
+            -webkit-animation: bgcolor 20s infinite;
+            animation: bgcolor 10s infinite;
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        <canvas id="canvas" width="500" height="500"></canvas>
+
+    </div>
+    <label for="accept">
+        <input type="checkbox" id="check1" name="check1"> Solid BG</input>
+    </label>
+    <script id="motion-poem">
+        (function () {
+            init(window);
+            window.opspark.makeGame();
+        })();
+        console.log("asdas")
+        if (document.getElementById('check1').checked) {
+            alert("checked");
+        } 
+    </script>
+    <script>
+
+    </script>
+
+
+
+
+</body>
 
 </html>
