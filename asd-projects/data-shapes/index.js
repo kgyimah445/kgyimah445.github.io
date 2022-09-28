@@ -95,7 +95,7 @@ function handleGood(color,shape,repeat){
   function badDisplay() {
     // TODO 5-b: call your handleStatic function
     var currentShape = dataShapes[currentIndex];
-    var repeat = currentShape[repeat];
+    var repeat = currentShape[currentShape.repeat];
     handleBad(currentShape,repeat);
   }
 
