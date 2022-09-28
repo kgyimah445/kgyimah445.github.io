@@ -49,7 +49,7 @@ $(document).ready(function () {
   for (var i = 0; i < dataShapes.length; i++) {
     // Runs 5 times, with values of step 0 through 4.
     var currentShape = dataShapes[i];
-  }
+  
   if (currentShape.color === "red") {
     currentShape.goodBehavior = "bounce";
   } 
@@ -60,7 +60,7 @@ $(document).ready(function () {
   else {
     currentShape.goodBehavior = "spin";
   } 
-  
+}
   // TODO 3-a: add a function that handles the static display type
   function handleStatic(data){
     setBackgroundWithObject(data);
