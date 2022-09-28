@@ -96,7 +96,7 @@ function handleGood(color,shape,repeat){
     // TODO 5-b: call your handleStatic function
     var currentShape = dataShapes[currentIndex];
     var repeat = currentShape[repeat];
-    handleBad(currentShape.repeat);
+    handleBad(currentShape,repeat);
   }
 
   /////////////////////////////////////////////////
