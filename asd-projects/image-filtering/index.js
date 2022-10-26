@@ -20,8 +20,8 @@ function resetAndRender() {
 // all of your apply functions
 function applyAndRender() {
   // Multiple TODOs: Call your apply function(s) here
-  applyFIlter();
-
+  applyFilter();
+  applyAndRender();
   // do not change the below line of code
   render($("#display"), image);
 }
@@ -31,11 +31,16 @@ function applyAndRender() {
 /////////////////////////////////////////////////////////
 
 // TODO 1, 2 & 4: Create the applyFilter function here
-function applyFIlter() {
+function applyFilter() {
   var i, j;
-
   for (i = 0; i < image.length; i++) {
-    for (j = 0; j < image[i].length; j++) {}
+    for (j = 0; j < image[i].length; j++) {
+      var rgbString = image[i][j];
+      var rgbNumbers = rgbStringToArray(rgbString);
+      rgbNumbers[RED] = 255;
+      var rgbString = rgbArrayToString(rgbNumbers);
+      
+    }
   }
 }
 
