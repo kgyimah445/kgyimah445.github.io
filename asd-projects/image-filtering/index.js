@@ -53,7 +53,7 @@ function applyFilterNoBackground(filterFunction) {
     for (j = 0; j < image[i].length; j++) {
       if (image[i][j] === bg) {
 
-      
+        var rgbString = image[i][j];
       image[i][j] = rgbString;
 
       } else {
