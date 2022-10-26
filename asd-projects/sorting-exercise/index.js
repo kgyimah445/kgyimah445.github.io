@@ -25,7 +25,7 @@ async function bubbleSort(array) {
     }
   }
 }
-bubbleSort();
+
 // TODO 3: Implement quickSort
 // FUNCTION quicksort(array, left, right):
 //   IF (right - left) > 0:
@@ -46,7 +46,7 @@ async function quickSort(array, left, right) {
   }
 
 }
-quickSort();
+
 // TODOs 4 & 5: Implement partition
 // FUNCTION partition (array, left, right):
 // 	pivot = select a pivot
@@ -67,7 +67,7 @@ async function partition(array,left,right){
       right--
     }
     if (left < right){
-      swap(array,array[left].value,array[right].value);
+      swap(array,left,right);
       updateCounter(quickCounter);
       await sleep();
     }
