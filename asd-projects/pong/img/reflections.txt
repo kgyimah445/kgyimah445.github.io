@@ -37,6 +37,21 @@ IF player1 points OR player2 points === 11 {
     gameEnd();
 }
 
+IF padel1 touches ground {
+   padel1Speed = 0
+}
+
+IF padel1 touches roof {
+   padel1Speed = 0
+}
+
+IF padel2 touches ground {
+   padel2Speed = 0
+}
+
+IF padel1 touches roof {
+   padel2Speed = 0
+}
 
 Visual Game Components:
 
@@ -47,7 +62,9 @@ The ball (animated)
 The padels (animated)
 player1 score (static)
 player2 score (static)
+
     What data will you need to manage each game component?
+
 ballPositionX
 ballPositionY
 ballSpeedX
@@ -69,14 +86,23 @@ Events / Logic
 
 Keyboard events:
 
-on up arrow padel1positionY++
+on up arrow padel1Speed = 5
 
-on down arrow padel1positiony--
+on down arrow padel1Speed = -5
 
 
-on W key padel2positionY++
+on W key padel2Speed = 5
 
-on S key padel2positiony--
+on S key padel2Speed = -5
+
+
+on up arrow release padel1Speed = 0
+
+on down arrow release padel1Speed = 0
+
+on W key release padel2Speed = 0
+
+on S key release padel2Speed = 0
 
 
 on enter gameStart();
