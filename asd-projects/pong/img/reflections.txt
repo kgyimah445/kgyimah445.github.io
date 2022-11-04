@@ -1,0 +1,85 @@
+User Story / Gameplay
+
+    Describe the gameplay
+Pong is a 2d iteration of the game Ping Pong. One player controls a padel by moving it up or down to block the ball that is moving across the screen. The goal is 
+
+    What are the conditions when the game begins?
+The ball spawns in the centre of the screen, then moves to one side. The 2 padels spawn on either side of the screen.
+
+    Does the game have an end? If so, what are the conditions for when it ends?
+The game Pong ends when either player gets 11 points. 'Points' are awarded when the ball reaches the edge of the enemy player or CPU's side of the screen.
+
+    What ifs will there be?
+
+IF ball touches padel {
+    speed up ball
+    reverse balls direction (left to right)
+}
+
+IF ball touches ground {
+    reverse balls direction (up)
+}
+
+IF ball touches roof {
+    reverse balls direction (down)
+}
+
+IF ball touches right edge {
+   player1 points++
+}
+
+IF ball touches left edge {
+   player2 points++
+}
+
+IF player1 points OR player2 points === 11 {
+
+    gameEnd();
+}
+
+
+Visual Game Components:
+
+    What are the visual game components?
+
+The board (static)
+The ball (animated)
+The padels (animated)
+
+    What data will you need to manage each game component?
+ballPositionX
+ballPositionY
+ballSpeedX
+ballSpeedY
+
+padel1PositionX
+padel1PositionY
+
+padel2PositionX
+padel2PositionY
+
+Events / Logic
+    What events will occur in this game?
+
+Keyboard events:
+
+on up arrow padel1positionY++
+
+on down arrow padel1positiony--
+
+
+on W key padel2positionY++
+
+on S key padel2positiony--
+
+
+on enter gameStart();
+
+ball events:
+(already written)
+
+
+    How do those events affect the data of the program?
+These events will cause the padels to move up an down by changing their Y positions
+The ball events will change the balls speed and direction whenever it hits the edge of the board and the padel (speed only increases on the padel)
+
