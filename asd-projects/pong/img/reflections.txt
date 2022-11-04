@@ -45,7 +45,8 @@ Visual Game Components:
 The board (static)
 The ball (animated)
 The padels (animated)
-
+player1 score (static)
+player2 score (static)
     What data will you need to manage each game component?
 ballPositionX
 ballPositionY
@@ -54,9 +55,14 @@ ballSpeedY
 
 padel1PositionX
 padel1PositionY
+padel1Speed
 
 padel2PositionX
 padel2PositionY
+padel2Speed
+
+player1 points (points1)
+player2 points (points2)
 
 Events / Logic
     What events will occur in this game?
