@@ -6,38 +6,13 @@ function runProgram(){
   ////////////////////////////////////////////////////////////////////////////////
   //////////////////////////// SETUP /////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
-  function handleKeyDown(event) {
-    console.log("Key pressed: " + event.which);
-  
-    if (event.which === 40) {
-      console.log("DOWN pressed");
-      
-  
-  }
-  if (event.which === 38) {
-    console.log("UP pressed");
-   
-  }
-  
-  }
   
 
 
   // Constant Variables
   const FRAME_RATE = 60;
   const FRAMES_PER_SECOND_INTERVAL = 1000 / FRAME_RATE;
-  var KEY = {
-    "LEFT": 37,
-  };
-  var KEY = {
-    "RIGHT": 39,
-  };
-  var KEY = {
-    "UP": 38,
-  };
-  var KEY = {
-    "DOWN": 40,
-  };
+  
   
   // Game Item Objects
 var rightPaddle = gameFactory("#rightPaddle", "rightPaddle");
@@ -89,7 +64,9 @@ var ball = gameFactory("#ball", "ball");
   Called in response to events.
   */
   function handleEvent(event) {
-
+    moveObject(ball);
+    moveObject(leftPaddle);
+    moveObject(rightPaddle);
   }
 
   ////////////////////////////////////////////////////////////////////////////////
@@ -119,18 +96,23 @@ name.speedY = 0;
 
 return name;
 }
-}
-
 
 function startBall() {
   randomNum = (Math.random() * 3 + 2) * (Math.random() > 0.5 ? -1 : 1);
   ball.speedX = randomNum;
-  ball.sppedY = randomNum;
+  ball.speedY = randomNum;
+  
 }
 
 function moveObject(obj) {
 obj.x += obj.speedX;
 obj.y += obj.speedY;
 
+$(obj).css("left", obj.x)
+$(obj).css("top", obj.y)
 }
+}
+
+
+
 
