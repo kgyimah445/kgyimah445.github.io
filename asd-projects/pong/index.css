@@ -11,14 +11,7 @@ body {
   position: relative;
 }
 
-#gameItem {
-  background-color: teal;
-  width: 50px;
-  height: 50px;
-  position: absolute;
-/*   left: 100px; */  /* Uncomment if you want to set a "starting" position */
-/*   top: 100px;  */  /* Uncomment if you want to set a "starting" position */
-}
+
 #leftPaddle {
   width: 20px;
   height: 80px;
@@ -47,4 +40,14 @@ body {
   border-radius: 10px;
   background-color: wheat;
   position: absolute;
+
+  top: 170px;
+  left: 210px;
+}
+#scoreboard {
+  position: absolute;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+left: 210px;
+
 }
