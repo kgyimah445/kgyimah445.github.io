@@ -162,6 +162,7 @@ function runProgram() {
         console.log(player1Score);
         resetBall();
       }
+      }
       if (gameItem.x <= 0) {
         player2Score++;
         console.log(player2Score);
@@ -191,7 +192,7 @@ function runProgram() {
         ) {
           gameItem.speedY = 0;
         }
-      }
+      
     }
   }
 
