@@ -1,0 +1,24 @@
+{
+  "name": "asdf",
+  "homepage": "https://github.com/kgyimah445/asdf",
+  "authors": [
+    "kgyimah445 <kgyimah445@gmail.com>"
+  ],
+  "description": "A video game library",
+  "main": "index.js",
+  "keywords": [
+    "Games",
+    "Library"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
