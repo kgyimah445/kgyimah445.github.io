@@ -41,11 +41,11 @@ console.log(asdf);
       y: stage.mouseY
 
     };
-    const degrees = asdf.numz.getAngleDegrees(ship, mouse);
+    var degrees = asdf.numz.getAngleDegrees(ship, mouse);
    console.log(degrees);
     
     // TODO 8: Set the ship's rotation property to the degrees //
-   ship.rotation = degrees;
+  ship.rotation = degrees;
     
     
     /*

@@ -71,6 +71,9 @@
       widthPlayer = paddlePlayer.width,
       heightPlayer = paddlePlayer.height;
 
+      console.log(ball.x);
+      console.log(paddlePlayer.y);
+      // console.log(ball.y);
     // Ball movement: the xVelocity and yVelocity is the distance the ball moves per update
     ball.x = ball.x + ball.xVelocity;
     ball.y = ball.y + ball.yVelocity;
@@ -106,24 +109,28 @@
 
     // TODO 3: bounce the ball off each of the paddles
     if (ball.x >= canvas.width) {
-      ball.xVelocity *= -1;
+      // ball.xVelocity *= -1;
+      ball.x = canvas.width / 2;
+      ball.y = canvas.height / 2;
+      console.log("1");
     }
     if (ball.x <= 0) {
-      ball.xVelocity *= -1;
+      // ball.xVelocity *= -1;
+      ball.x = canvas.width / 2;
+      ball.y = canvas.height / 2;
+      console.log("1");
     }
     if (ball.x >= paddleCPU.x) {
-
       ball.xVelocity *= -1;
     }
-    if (ball.x <= paddlePlayer.width) {
+    if (ball.x <= paddlePlayer.width && ball.y > paddlePlayer.y && ball.y < paddlePlayer.y + 80
+      ) {
       ball.xVelocity *= -1;
     }
 
     //   if (ball.x > paddleCPU.x) {
     //       ball.x *= -1
     //   }
-
-    
   }
 
   // helper function that wraps the draw.rect function for easy paddle making
