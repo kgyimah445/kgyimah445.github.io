@@ -1,5 +1,5 @@
 // TODO 5.b: Replace *my-game-lib* with the name of your game lib
-(function(window, draw, *my-game-lib*) {
+(function(window, draw, asdf) {
   
   function centerOnStage(asset, canvas) {
     if(asset.type === 'circular' || asset.radius) {
@@ -36,7 +36,8 @@
       ship.cache(-radius - 10, -radius - 10, radius * 2 + 15, radius * 2 + 15);
       
       // TODO 6: Merge the ship with your game libs makeBody()
-      
+      Object.assign(ship, asdf.phyz.makeBody('ship'));
+
       
       
       // give the ship a default propulsion //
@@ -47,4 +48,4 @@
     centerOnStage,
   };
 // TODO 5.a: Replace *my-game-lib* with the name of your game lib
-}(window, window.opspark.draw, window.*my-game-lib*));
+}(window, window.opspark.draw, window.asdf));
