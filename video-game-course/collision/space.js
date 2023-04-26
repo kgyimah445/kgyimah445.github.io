@@ -1,4 +1,4 @@
-(function(window, opspark, racket) {
+(function(window, opspark, racket, asdf) {
   /**
    * Creates and returns the space module. Listens for SPAWN 
    * events, adding any bodies in the event
@@ -49,21 +49,29 @@
             const bodyB = active[j];
             
             // TODO 1: Calculate hit test components
-            
-            
+            const distance = asdf.phyz.getDistance(bodyA, bodyB);
+            const minDistance = bodyA.radius + bodyB.radius;
               
             // TODO 2: Do collision check: how do we know if bodies are colliding?
-            if(/* replace with collision check */ false) {
+            if(distance <= (bodyA.radius + bodyB.radius) ) {
               // console.log('hit!');
               
               // TODO 3: Calculate springToX and springToY 
-              
-              
-                
+              var  angle = asdf.numz.getAngleDegrees(bodyA, bodyB);
+              springToX = (Math.cos(angle) * minDistance) + bodyA.x;
+              springToY = (Math.sin(angle) * minDistance) + bodyA.y;
+                // console.log(springToX);
+                // console.log(springToY);
+
               // TODO 4: Calculate acceleration to spring-to point, factor in dampeningForce
-              
-              
-              
+             var accelerationOnX = (bodyA.x - springToX) * dampeningForce;
+             var accelerationOnY = (bodyA.y - springToY) * dampeningForce;
+
+             bodyA.velocityX = bodyA.velocityX + accelerationOnX;
+             bodyA.velocityY = bodyA.velocityY + accelerationOnY;
+
+             bodyB.velocityX = bodyB.velocityX -  accelerationOnX;
+             bodyB.velocityY = bodyB.velocityY - accelerationOnY;
               // TODO 5: Apply acceleration to bodyB
               
               
@@ -78,4 +86,4 @@
       }
     };
   };
-}(window, window.opspark, window.opspark.racket));
+}(window, window.opspark, window.opspark.racket, window.asdf));
