@@ -23,7 +23,7 @@
     function onSettingsClicked(event) {
       view.menu.btnSettings.off('click', onSettingsClicked);
       console.log('TODO: show settings');
-      // showSettings();
+      showSettings();
     }
     
     function onQuitClicked(event) {

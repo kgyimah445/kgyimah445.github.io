@@ -1,0 +1,1 @@
+Change color of ship in settings

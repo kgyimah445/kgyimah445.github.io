@@ -15,6 +15,11 @@
       view.btnPlay.off('click', onPlayClicked);
       game.play();
     }
+
+    function onSettingsClicked(event) {
+      view.btnSettings.off('click', onSettingsClicked);
+      game.play();
+    }
     
     /*
      * Return the mediator API: Each mediator must expose its view,
@@ -33,6 +38,7 @@
           game.view.addChild(view.asset);
           view.btnLobby.on('click', onLobbyClicked);
           view.btnPlay.on('click', onPlayClicked);
+          view.btnSettings.on('click', onSettingsClicked);
           view.setText(_.get(data, 'message') || 'Game Over');
           view.open();
           // don't wait for open animation to end to call resolve //
@@ -47,6 +53,7 @@
       destroy() {
         view.btnLobby.off('click', onLobbyClicked);
         view.btnPlay.off('click', onPlayClicked);
+        view.btnSettings.off('click', onSettingsClicked);
         game.view.removeChild(view.asset);
       }
     };

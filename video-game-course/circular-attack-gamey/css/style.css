@@ -1,4 +1,10 @@
 /* all app specific css rules listed here */
 body {
     margin: 0;
+    background-color: coral;
+}
+
+#canvas {
+
+    background-color: coral;
 }

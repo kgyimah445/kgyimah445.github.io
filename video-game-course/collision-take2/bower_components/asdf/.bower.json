@@ -1,0 +1,35 @@
+{
+  "name": "asdf",
+  "homepage": "https://github.com/kgyimah445/asdf",
+  "authors": [
+    "kgyimah445 <kgyimah445@gmail.com>"
+  ],
+  "description": "A video game library",
+  "main": "index.js",
+  "keywords": [
+    "Games",
+    "Library"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "version": "0.5.0",
+  "_release": "0.5.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.5.0",
+    "commit": "8111951505a1f4e2dd60ac8d430e3cf27f6d3aea"
+  },
+  "_source": "https://github.com/kgyimah445/asdf.git",
+  "_target": "^0.5.0",
+  "_originalSource": "https://github.com/kgyimah445/asdf.git",
+  "_direct": true
+}
